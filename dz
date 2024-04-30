@@ -1,0 +1,14 @@
+def my_decorator(func):
+    def wrapper(*args, **kwargs):
+        print("Код до виконання функції")
+        result = func(*args, **kwargs)
+        print("Код після виконання функції")
+        return result
+    return wrapper
+
+# Приклад використання декоратора
+@my_decorator
+def example_function():
+    print("Це функція прикладу")
+
+example_function()
